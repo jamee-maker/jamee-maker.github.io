@@ -2,6 +2,12 @@ body {
   background-color: rgba(0, 0, 0, 0.851);
 }
 
+hr {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+
 .nav-container div {
   /* border: solid 2px black; */
   padding: 10px;
@@ -64,11 +70,33 @@ body {
   width: 70px;
   height: 70px;
 }
-
-.skills img:hover {
+.yellow:hover {
+  filter: drop-shadow(10px 10px 8px yellow);
+}
+.cblue:hover {
+  filter: drop-shadow(10px 10px 8px rgb(0, 136, 255));
+}
+.red:hover {
+  filter: drop-shadow(10px 10px 8px rgb(255, 0, 0));
+}
+.green:hover {
+  filter: drop-shadow(10px 10px 8px rgb(1, 160, 1));
+}
+.lblue:hover {
+  filter: drop-shadow(10px 10px 8px rgb(0, 208, 255));
+}
+.purple:hover {
+  filter: drop-shadow(10px 10px 8px rebeccapurple);
+}
+.dblue:hover {
+  filter: drop-shadow(10px 10px 8px rgb(18, 63, 160));
+}
+.black:hover {
   filter: drop-shadow(10px 10px 8px #888888);
 }
-
+.skills img:hover {
+  cursor: pointer;
+}
 .skills {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -85,15 +113,19 @@ body {
   filter: drop-shadow(10px 10px 8px #888888);
 }
 
+.headshot {
+  display: flex;
+  justify-content: center;
+}
+
 .projects-container div {
   /* border: solid 2px black; */
   padding: 10px;
   border-radius: 5px;
-  color: red;
 }
 
-.projects-container {
-  font-size: 20px;
+#center {
+  text-align: center;
 }
 
 .contact-container div {
@@ -120,6 +152,89 @@ body {
   justify-content: center;
 }
 
+#slides {
+  /* border: solid 2px black; */
+  border-radius: 5px;
+  list-style-type: none;
+  position: relative;
+  height: 500px;
+  width: 700px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#slides1 {
+  /* border: solid 2px black; */
+  border-radius: 5px;
+  list-style-type: none;
+  position: relative;
+  height: 500px;
+  width: 700px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.slide1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.slide {
+  font-size: 20px;
+  box-sizing: border-box;
+  color: red;
+  background: #333;
+}
+
+.slide1 {
+  font-size: 20px;
+  box-sizing: border-box;
+  color: red;
+  background: #333;
+}
+
+#slides a {
+  text-decoration: none;
+}
+
+#slides1 a {
+  text-decoration: none;
+}
+
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+
+.showing1 {
+  opacity: 1;
+  z-index: 2;
+}
+.justcoz {
+  display: flex;
+  justify-content: space-around;
+}
+
+.justcoz1 {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 1000px) {
   .headshot img {
     width: 35%;
@@ -127,11 +242,27 @@ body {
     min-width: 150px;
     min-height: 150px;
   }
+  #slides {
+    height: 400px;
+    width: 600px;
+  }
+  #slides1 {
+    height: 400px;
+    width: 600px;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .skills img {
     padding: 5px;
+  }
+  #slides {
+    height: 350px;
+    width: 550px;
+  }
+  #slides1 {
+    height: 350px;
+    width: 550px;
   }
 }
 
@@ -154,17 +285,26 @@ body {
     font-size: 25px;
   }
   .about-container {
-    font-size: 15px;
+    font-size: 16px;
   }
   .projects-container {
-    font-size: 15px;
+    font-size: 16px;
   }
   .skills img {
     width: 50px;
     height: 50px;
   }
   .contact-container a {
-    font-size: 15px;
+    font-size: 16px;
+  }
+  .slide {
+    font-size: 16px;
+  }
+  .slide1 {
+    font-size: 16px;
+  }
+  button {
+    font-size: 10px;
   }
 }
 
@@ -172,6 +312,63 @@ body {
   .skills {
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+  #slides {
+    height: 300px;
+    width: 500px;
+  }
+  #slides1 {
+    height: 300px;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #slides {
+    height: 250px;
+    width: 450px;
+  }
+  #slides1 {
+    height: 250px;
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #slides {
+    height: 200px;
+    width: 400px;
+  }
+  #slides1 {
+    height: 200px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  #slides {
+    width: 350px;
+  }
+  #slides1 {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #slides {
+    width: 300px;
+  }
+  #slides1 {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  #slides {
+    width: 280px;
+  }
+  #slides1 {
+    width: 280px;
   }
 }
 
@@ -201,5 +398,20 @@ body {
   }
   .contact-container a {
     font-size: 10px;
+  }
+  #slides {
+    width: 200px;
+  }
+  #slides1 {
+    width: 200px;
+  }
+  .slide {
+    font-size: 10px;
+  }
+  .slide1 {
+    font-size: 10px;
+  }
+  button {
+    font-size: 5px;
   }
 }
