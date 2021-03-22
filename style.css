@@ -9,7 +9,7 @@ hr {
 }
 
 .nav-container div {
-  /* border: solid 2px black; */
+  /* border: solid 2px red; */
   padding: 10px;
   border-radius: 5px;
   color: #ffffff;
@@ -52,7 +52,7 @@ hr {
 }
 
 .about-container div {
-  /* border: solid 2px black; */
+  /* border: solid 2px red; */
   padding: 10px;
   border-radius: 5px;
   color: #ffffff;
@@ -63,7 +63,7 @@ hr {
 }
 
 .skills-container img {
-  /* border: solid 2px black; */
+  /* border: solid 2px red; */
   background-color: white;
   padding: 10px;
   border-radius: 5px;
@@ -119,17 +119,13 @@ hr {
 }
 
 .projects-container div {
-  /* border: solid 2px black; */
+  /* border: solid 2px red; */
   padding: 10px;
   border-radius: 5px;
 }
 
-#center {
-  text-align: center;
-}
-
 .contact-container div {
-  /* border: solid 2px black; */
+  /* border: solid 2px red; */
   padding: 10px;
   border-radius: 5px;
 }
@@ -153,7 +149,7 @@ hr {
 }
 
 #slides {
-  /* border: solid 2px black; */
+  /* border: solid 2px red; */
   border-radius: 5px;
   list-style-type: none;
   position: relative;
@@ -164,7 +160,7 @@ hr {
 }
 
 #slides1 {
-  /* border: solid 2px black; */
+  /* border: solid 2px red; */
   border-radius: 5px;
   list-style-type: none;
   position: relative;
@@ -184,6 +180,21 @@ hr {
   z-index: 1;
 }
 
+#center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#center2 {
+  display: flex;
+  justify-content: center;
+}
+
+.padding {
+  padding: 10px;
+}
+
 .slide1 {
   position: absolute;
   left: 0px;
@@ -195,6 +206,7 @@ hr {
 }
 
 .slide {
+  /* border: solid 2px red; */
   font-size: 20px;
   box-sizing: border-box;
   color: #ffffff;
@@ -202,6 +214,7 @@ hr {
 }
 
 .slide1 {
+  /* border: solid 2px red; */
   font-size: 20px;
   box-sizing: border-box;
   color: #ffffff;
@@ -233,6 +246,8 @@ hr {
 .justcoz1 {
   display: flex;
   justify-content: center;
+  justify-content: space-between;
+  width: 400px;
 }
 
 @media screen and (max-width: 1000px) {
